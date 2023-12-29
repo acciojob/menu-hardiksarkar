@@ -32,7 +32,7 @@ export default function Menu() {
         <ul className="navbar">
           {categories.map((item) => {
             return (
-              <li key={item.id} onClick={() => showItemFunc(item.value)}>
+              <li key={item.id} id={item.id} onClick={() => showItemFunc(item.value)}>
                 {item.value}
               </li>
             );
