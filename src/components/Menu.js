@@ -5,7 +5,12 @@ import menuData from "./MenuData";
 export default function Menu() {
   // console.log(menuData);
   let [menu, setMenu] = useState(menuData);
-  let categories = ["All", "Breakfast", "Lunch", "Shakes"];
+  let categories = [
+    { id: "main", value: "All" },
+    { id: "filter-btn-1", value: "Breakfast" },
+    { id: "filter-btn-2", value: "Lunch" },
+    { id: "filter-btn-3", value: "Shakes" },
+  ];
 
   function showItemFunc(key) {
     if (key == "All") {
@@ -27,8 +32,8 @@ export default function Menu() {
         <ul className="navbar">
           {categories.map((item) => {
             return (
-              <li key={item} onClick={() => showItemFunc(item)}>
-                {item}
+              <li key={item.id} onClick={() => showItemFunc(item.value)}>
+                {item.value}
               </li>
             );
           })}
