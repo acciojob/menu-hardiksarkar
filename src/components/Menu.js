@@ -42,7 +42,7 @@ export default function Menu() {
       <div className="menu-items">
         {menu.map((item) => {
           return (
-            <div className="item" key={item.id}>
+            <div className="item" key={item.id} data-test-id={`menu-item-${item.category}`}>
               <div className="img-div">
                 <img
                   src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
